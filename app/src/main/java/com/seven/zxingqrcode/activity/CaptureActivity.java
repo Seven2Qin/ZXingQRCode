@@ -92,7 +92,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 		scanLine = (ImageView) findViewById(R.id.capture_scan_line);
 
 		inactivityTimer = new InactivityTimer(this);
-		beepManager = new BeepManager(this);
 
 		TranslateAnimation animation = new TranslateAnimation(Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT,
 				0.9f);
@@ -129,6 +128,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 		}
 
 		inactivityTimer.onResume();
+		beepManager = new BeepManager(this);
 	}
 
 	@Override
